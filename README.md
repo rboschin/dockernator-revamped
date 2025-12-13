@@ -1,5 +1,6 @@
-# dockernator
+# dockernator-revamped
 PHP fork of the Docker Desktop name generator when provisioning containers.
+Forked from srmklive/dockernator by Raza Mehdi
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
@@ -12,7 +13,7 @@ PHP fork of the Docker Desktop name generator when provisioning containers.
 
 The package can be installed through Composer:
 
-# Add a personal package in gitlab
+# Add a personal package in github
     "repositories": [
       {
           "type": "vcs",
@@ -30,8 +31,8 @@ The package can be installed through Composer:
         }
     ],
 ```
-composer require rboschin/laravel-resume-mail-dissect:dev-main --no-update --prefer-source
-composer update rboschin/laravel-resume-mail-dissect --prefer-source
+composer require rboschin/dockernator-revamped:dev-main --no-update --prefer-source
+composer update rboschin/dockernator-revamped --prefer-source
 ```
 
 <a name="usage"></a>
