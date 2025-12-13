@@ -46,3 +46,17 @@ $provider = new NameGenerator;
 
 // Generate a random beautiful name
 $name = $provider->generate();
+    => intelligent-feistel
+
+// Generate a less common random beautiful name
+$name = $provider->generate('day');
+    => loving-allen-saturday
+$name = $provider->generate('date');
+    => exciting-mestorf-2025-12-13
+$name = $provider->generate('unique');
+    => hungry-goldberg-693d9b8c9004f
+$name = $provider->generate('random');
+    => pedantic-haibt-2497
+$name = $provider->generate('customStringOrNumber');
+    => beautiful-faraday-customStringOrNumber
+    => kind-snyder-customStringOrNumber
