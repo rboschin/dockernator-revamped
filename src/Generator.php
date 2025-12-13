@@ -1,6 +1,6 @@
 <?php
 
-namespace Srmklive\Dockernator;
+namespace Rboschin\DockernatorRevamped;
 
 class Generator
 {
@@ -29,9 +29,9 @@ class Generator
     /**
      * Set custom delimiter string.
      *
-     * @return \Srmklive\Dockernator\Generator
+     * @return \Rboschin\DockernatorRevamped\Generator
      */
-    public function setDelimiterString(string $delimiter): \Srmklive\Dockernator\Generator
+    public function setDelimiterString(string $delimiter): \Rboschin\DockernatorRevamped\Generator
     {
         $this->delimiter = $delimiter;
 
