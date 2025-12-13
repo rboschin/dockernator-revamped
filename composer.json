@@ -1,18 +1,20 @@
 {
   "name": "rboschin/dockernator-revamped",
   "type": "library",
-  "description": "PHP port of name generator used by Docker Desktop to generate container names.",
+  "description": "PHP port of name generator used by docker to generate container names.",
   "keywords": [
     "generator",
     "names",
-    "names generator"
+    "names generator",
+    "docker names",
+    "container name"
   ],
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
     {
       "name": "Roberto Boschin",
-      "email": "roberto.boschin@gmail.com"
+      "email": "rboschin@gmail.com"
     }
   ],
   "autoload": {
