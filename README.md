@@ -1,4 +1,5 @@
 # dockernator-revamped
+
 PHP fork of the Docker Desktop name generator when provisioning containers.
 Forked from srmklive/dockernator by Raza Mehdi
 
@@ -7,20 +8,27 @@ Forked from srmklive/dockernator by Raza Mehdi
 - [Installation](#installation)
 - [Usage](#usage)
 
-
 <a name="installation"></a>
+
 ## Installation
 
 The package can be installed through Composer:
 
 # Add a personal package in github
+
+Edit application's composer.json:
+
     "repositories": [
       {
           "type": "vcs",
           "url":  "https://github.com/rboschin/dockernator-revamped.git"
       }
     ],
+
 # Add a local personal package
+
+Edit application's composer.json:
+
     "repositories": [
         {
             "type": "path",
@@ -30,27 +38,33 @@ The package can be installed through Composer:
             }
         }
     ],
+
 ```
 composer require rboschin/dockernator-revamped:dev-main --no-update --prefer-source
 composer update rboschin/dockernator-revamped --prefer-source
 ```
 
 <a name="usage"></a>
+
 ## Usage
 
 ```php
 // Import the class namespaces first, before using it directly
 use Rboschin\DockernatorRevamped\Generator;
 
-$provider = new NameGenerator;
+$provider = new Generator;
 
 // Generate a random beautiful name
 $name = $provider->generate();
     => intelligent-feistel
 
-// Generate a less common random beautiful name
+// Generate a less common random name
 $name = $provider->generate('day');
     => loving-allen-saturday
+$name = $provider->generate('shortday');
+    => loving-allen-sat
+$name = $provider->generate('daynumber');
+    => zen-faraday-13
 $name = $provider->generate('date');
     => exciting-mestorf-2025-12-13
 $name = $provider->generate('unique');
@@ -60,3 +74,22 @@ $name = $provider->generate('random');
 $name = $provider->generate('customStringOrNumber');
     => beautiful-faraday-customStringOrNumber
     => kind-snyder-customStringOrNumber
+
+// Generate a shorter name
+$name = $provider->generatePrefix();
+    => eloquent
+$name = $provider->generatePrefix('day');
+    => funny-saturday
+$name = $provider->generatePrefix('month');
+    => busy-december
+```
+
+## Tinker
+
+```php
+php artisan tinker
+use Rboschin\DockernatorRevamped\Generator;
+$provider = new Generator;
+$name = $provider->generate();
+$name = $provider->generatePrefix();
+```
